@@ -26,7 +26,7 @@
 static int my_proc_show(struct seq_file *m, void *v){
         struct sysinfo i;
         si_meminfo(&i);
-        seq_printf(m, "%lu\n%lu\n%lu\n%lu\n",i.totalram, i.totalram - i.freeram, i.freeram, ((i.totalram - i.freeram)*100)/i.totalram);
+        seq_printf(m, "%lu\n%lu\n%lu\n%lu\n",(i.totalram * i.mem_unit)/1024, ((i.totalram - i.freeram) * i.mem_unit)/1024, (i.freeram * i.mem_unit)/1024,((i.totalram - i.freeram)*100)/i.totalram);
     return 0;
 }
 
