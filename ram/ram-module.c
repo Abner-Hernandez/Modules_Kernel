@@ -1,4 +1,3 @@
-  GNU nano 4.8                                                                                                                                                  ram-module.c                                                                                                                                                            
 #include <linux/module.h>
 #include <linux/sched.h>
 #include <linux/uaccess.h>
